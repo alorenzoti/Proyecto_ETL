@@ -1,0 +1,42 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema peaks
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema peaks
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `peaks` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `peaks` ;
+
+-- -----------------------------------------------------
+-- Table `peaks`.`peaks2`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `peaks`.`peaks2` (
+  `index` BIGINT NULL DEFAULT NULL,
+  `peak_id` TEXT NULL DEFAULT NULL,
+  `peak_name` TEXT NULL DEFAULT NULL,
+  `height_metres` BIGINT NULL DEFAULT NULL,
+  `climbing_status` TEXT NULL DEFAULT NULL,
+  `first_ascent_year` DOUBLE NULL DEFAULT NULL,
+  `first_ascent_country` TEXT NULL DEFAULT NULL,
+  `first_ascent_expedition_id` TEXT NULL DEFAULT NULL,
+  `coord` TEXT NULL DEFAULT NULL,
+  `news` TEXT NULL DEFAULT NULL,
+  INDEX `ix_peaks2_index` (`index` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
